@@ -1,1 +1,14 @@
-{"employeeId":"101","name":"Vidya","basic":475000.0,"hra":237500.0,"lta":95000.0,"pf":1800.0,"specialAllowance":861500.0,"sodexo":2200.0,"vpf":0.0,"sodexoOpt":"IN","password":"Vidya@123","ctc":1000000.0}
+[{
+  "password": "Vidya@123",
+  "ctc": 100000,
+  "hra": 25000,
+  "pf": 1800,
+  "name": "Vidya",
+  "lta": 10000,
+  "sodexoOpt": "IN",
+  "specialAllowance": 89000,
+  "employeeId": "101",
+  "basic": 50000,
+  "sodexo": 2200,
+  "vpf": 0
+}]

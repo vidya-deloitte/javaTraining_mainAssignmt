@@ -13,6 +13,7 @@ public class EmployeeDetails {
     }
 
     public void setVpf(double vpf) {
+
         this.vpf = vpf;
     }
 
@@ -71,6 +72,10 @@ public class EmployeeDetails {
         this.vpf = vpf;
         this.sodexoOpt = sodexoOpt;
         this.password = password;
+    }
+
+    public EmployeeDetails(){
+
     }
 
     // Getters and Setters
