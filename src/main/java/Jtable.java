@@ -8,7 +8,7 @@ public class Jtable extends JFrame {
 
     private JTable table;
     private DefaultTableModel tableModel;
-
+    //Creates a table to display employee CTC Structure in table format using Java Swing
     public Jtable() {
         // Set the frame title
         super("Employee Details");
@@ -56,7 +56,7 @@ public class Jtable extends JFrame {
 
 
         // Add a new row for projected amounts
-        Object[] projectedRowData = {"Projected", projectedBasic, projectedHRA, projectedLTA, projectedCTC,projectedPF,projectedSod,projectedsp,projectedvpf};
+        Object[] projectedRowData = {"Fixed", projectedBasic, projectedHRA, projectedLTA, projectedCTC,projectedPF,projectedSod,projectedsp,projectedvpf};
         tableModel.addRow(projectedRowData);
 
     }

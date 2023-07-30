@@ -1,3 +1,5 @@
+
+//Class that defines Employess details along with getter and setter methods
 public class EmployeeDetails {
     private String employeeId;
     private String name;
@@ -13,7 +15,6 @@ public class EmployeeDetails {
     }
 
     public void setVpf(double vpf) {
-
         this.vpf = vpf;
     }
 

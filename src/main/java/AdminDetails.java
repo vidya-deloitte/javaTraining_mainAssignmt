@@ -13,11 +13,5 @@ public class AdminDetails {
     public String getLoginId() {
         return loginId;
     }
-    public String getPassword() {
-        return password;
-    }
-
-
-
-
+    public String getPassword() {return password;}
 }

@@ -1,4 +1,5 @@
 public class SplAllowanceCompute {
+    //calculates specialAllowances of the employee
     double computeSpl(EmployeeDetails emp)
     {
         double spl=0;

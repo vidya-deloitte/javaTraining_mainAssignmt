@@ -8,7 +8,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+
 public class JsonFileHandle {
+    //writes the employee record in the json file
     void jsonWrite(EmployeeDetails emp,String jsonfilepath){
         try {
             JSONObject empJSON=createEmpJson(emp);
@@ -38,11 +40,7 @@ public class JsonFileHandle {
 
 
     }
-
-    void jsonRead(String emp)
-    {
-
-    }
+    //creates a json object of employee record
     JSONObject createEmpJson(EmployeeDetails emp)
     {
         JSONObject newData = new JSONObject();
@@ -59,7 +57,6 @@ public class JsonFileHandle {
         newData.put("password",emp.getPassword());
         newData.put("specialAllowance",emp.getSpecialAllowance());
         return newData;
-
 
     }
 }

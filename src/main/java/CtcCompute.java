@@ -1,31 +1,16 @@
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-import javax.swing.text.TableView;
-import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
-
-import static com.sun.org.apache.xerces.internal.util.DOMUtil.setVisible;
-
+//Handles CTC related computation
 public class CtcCompute {
+    //This function computes the salary components when a new employee record is initially added
     void ctcFunc(String empId, String empName, Double ctc) {
-        // Path to the properties file
+
         String propertiesFilePath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\componentpercent.properties";
 
         try (FileInputStream fileInputStream = new FileInputStream(propertiesFilePath)) {
@@ -38,19 +23,22 @@ public class CtcCompute {
             if (hraPercentStr != null) {
                 hraPercent = Double.parseDouble(hraPercentStr);
                 System.out.println("HRA Percentage: " + hraPercent);
-            } else {
+            }
+            else {
                 System.out.println("HRA Percentage not found in the properties file.");
             }
             if (basicPercentStr != null) {
                 basicPercent = Double.parseDouble(basicPercentStr);
                 System.out.println("Basic Percentage: " + basicPercent);
-            } else {
+            }
+            else {
                 System.out.println("Basic Percentage not found in the properties file.");
             }
             if (ltaPercentStr != null) {
                 ltaPercent = Double.parseDouble(ltaPercentStr);
                 System.out.println("Basic Percentage: " + ltaPercent);
-            } else {
+            }
+            else {
                 System.out.println("lta Percentage not found in the properties file.");
             }
             double basic = (basicPercent / 100) * ctc;
@@ -58,7 +46,7 @@ public class CtcCompute {
             double lta = (ltaPercent / 100) * ctc;
             double pf = 1800;
             double sodexo = 2200;
-            double special = ctc - (hra - lta - pf - sodexo);
+            double special = ctc - basic-hra-lta-pf-sodexo;
             insertRecord(empId, empName, basic, hra, lta, pf, special, ctc, sodexo, 0, "IN", empName + "@123");
 
         } catch (IOException e) {
@@ -66,7 +54,7 @@ public class CtcCompute {
         }
 
     }
-
+    // This function is called when an employees's ctc has to be updated
     void updateCtc(String empId, Double ctc) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonfilepath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\src\\main\\resources\\EmployeeDetails.json";
@@ -90,6 +78,7 @@ public class CtcCompute {
 
     }
 
+    //To insert an employee record into file
     void insertRecord(String empId, String empName, double basic, double hra, double lta, double pf, double special, double ctc, double sodexo, double vpf, String sodexoOpt, String password) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonfilepath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\src\\main\\resources\\EmployeeDetails.json";
@@ -97,13 +86,9 @@ public class CtcCompute {
         JsonFileHandle json = new JsonFileHandle();
         json.jsonWrite(emp, jsonfilepath);
     }
-
+    //Function is called when we want to update any details of employee record
     void deleteRecord(String empIdToDelete) {
         String jsonFilePath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\src\\main\\resources\\EmployeeDetails.json";
-
-        // The employee ID to delete
-
-        // Create an ObjectMapper instance to read JSON
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
@@ -141,9 +126,10 @@ public class CtcCompute {
 
 
     }
-
+    //Function retrieves the matching record
     void retrieveRecord(String empId) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
+        boolean result=false;
         String jsonfilepath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\src\\main\\resources\\EmployeeDetails.json";
         List<EmployeeDetails> employees = objectMapper.readValue(new File(jsonfilepath), new TypeReference<List<EmployeeDetails>>() {
         });
@@ -153,12 +139,13 @@ public class CtcCompute {
             if (id.equals(empId)) {
                 Jtable employeeTableDisplay=new Jtable();
                 employeeTableDisplay.addEmployeeRow(employee);
+                result=true;
                 break;
-            } else
-                System.out.println("Record not found");
-
+            }
 
         }
+        if(result==false)
+            System.out.println("Record not found");
     }
 
 

@@ -1,14 +1,58 @@
-[{
-  "password": "Vidya@123",
-  "ctc": 100000,
-  "hra": 25000,
-  "pf": 1800,
-  "name": "Vidya",
-  "lta": 10000,
-  "sodexoOpt": "IN",
-  "specialAllowance": 89000,
-  "employeeId": "101",
-  "basic": 50000,
-  "sodexo": 2200,
-  "vpf": 0
-}]
+[
+  {
+    "password": "Vidya@123",
+    "ctc": 130000,
+    "hra": 32500,
+    "pf": 1800,
+    "name": "Vidya",
+    "lta": 13000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 15500,
+    "employeeId": "101",
+    "basic": 65000,
+    "sodexo": 2200,
+    "vpf": 0
+  },
+  {
+    "password": "Tan@123",
+    "ctc": 130000,
+    "hra": 32500,
+    "pf": 1800,
+    "name": "Tan",
+    "lta": 13000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 114500,
+    "employeeId": "102",
+    "basic": 65000,
+    "sodexo": 2200,
+    "vpf": 0
+  },
+  {
+    "password": "Tri@123",
+    "ctc": 130000,
+    "hra": 32500,
+    "pf": 1800,
+    "name": "Tri",
+    "lta": 13000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 15500,
+    "employeeId": "103",
+    "basic": 65000,
+    "sodexo": 2200,
+    "vpf": 0
+  },
+  {
+    "password": "Nik@123",
+    "ctc": 130000,
+    "hra": 32500,
+    "pf": 1800,
+    "name": "Nik",
+    "lta": 13000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 15500,
+    "employeeId": "104",
+    "basic": 65000,
+    "sodexo": 2200,
+    "vpf": 0
+  }
+]

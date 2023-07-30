@@ -7,12 +7,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class VpfCompute {
+    //calculates vpf of the employee and updates it back in the employee file
     void writeVpf() throws IOException {
         JsonFileHandle json=new JsonFileHandle();
         Scanner input=new Scanner(System.in);
         System.out.println("Enter the vpf percentage please enter number only");
-        int vpfpercent=input.nextInt();
-        System.out.println("Enter vpf");
+        int vpfpercent = input.nextInt();
+        System.out.println("Enter Employee Id");
         String empId=input.next();
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonfilepath = "C:\\Users\\vidye\\Desktop\\javaTraining_mainAssignmt\\src\\main\\resources\\EmployeeDetails.json";
@@ -35,12 +36,9 @@ public class VpfCompute {
                 break;
             } else
                 System.out.println("Record not found");
-
-
         }
 
     }
 
-
-    }
+}
 
