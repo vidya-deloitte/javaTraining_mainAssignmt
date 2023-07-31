@@ -26,7 +26,7 @@ public class main {
         LoggerFile logging = new LoggerFile();
         while (true) {
             String adminLoginId, adminPwd, empLoginId, empPwd;
-            System.out.println("\n\nMenu\n");
+            System.out.println("\n\n----Menu----\n");
             System.out.println("1.Admin\n2.Employee\n3.Exit\n");
             try {
                 System.out.println("Please enter choice:");

@@ -46,7 +46,7 @@ public class CtcCompute {
             double lta = (ltaPercent / 100) * ctc;
             double pf = 1800;
             double sodexo = 2200;
-            double special = ctc - basic-hra-lta-pf-sodexo;
+            double special = ctc - basic-hra-lta-pf;
             insertRecord(empId, empName, basic, hra, lta, pf, special, ctc, sodexo, 0, "IN", empName + "@123");
 
         } catch (IOException e) {
@@ -74,7 +74,6 @@ public class CtcCompute {
                 System.out.println("Employee record not found");
 
         }
-
 
     }
 
@@ -116,9 +115,7 @@ public class CtcCompute {
             if (employeeFound) {
                 // Write the updated list back to the file as a JSON array
                 objectMapper.writeValue(new File(jsonFilePath), employeesList);
-                System.out.println("Employee with EmployeeId " + empIdToDelete + " has been deleted.");
-            } else {
-                System.out.println("Employee with EmployeeId " + empIdToDelete + " not found.");
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -139,13 +136,11 @@ public class CtcCompute {
             if (id.equals(empId)) {
                 Jtable employeeTableDisplay=new Jtable();
                 employeeTableDisplay.addEmployeeRow(employee);
-                result=true;
                 break;
             }
 
         }
-        if(result==false)
-            System.out.println("Record not found");
+
     }
 
 

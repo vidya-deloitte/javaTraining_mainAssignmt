@@ -55,9 +55,6 @@ public class SodexoCompute {
                         copy.getSodexo(),copy.getVpf(),copy.getSodexoOpt(),copy.getPassword());
                 json.jsonWrite(emp,jsonfilepath);
                 break;
-            } else {
-                System.out.println("Record not found");
-                LoggerFile.info("Employee id "+id+"Not found in file");
             }
         }
     }

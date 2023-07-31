@@ -54,5 +54,33 @@
     "basic": 65000,
     "sodexo": 2200,
     "vpf": 0
+  },
+  {
+    "password": "Vidhi@123",
+    "ctc": 100000,
+    "hra": 25000,
+    "pf": 1800,
+    "name": "Vidhi",
+    "lta": 10000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 11000,
+    "employeeId": "108",
+    "basic": 50000,
+    "sodexo": 2200,
+    "vpf": 0
+  },
+  {
+    "password": "ram@123",
+    "ctc": 100000,
+    "hra": 25000,
+    "pf": 1800,
+    "name": "ram",
+    "lta": 10000,
+    "sodexoOpt": "IN",
+    "specialAllowance": 11000,
+    "employeeId": "110",
+    "basic": 50000,
+    "sodexo": 2200,
+    "vpf": 0
   }
 ]
