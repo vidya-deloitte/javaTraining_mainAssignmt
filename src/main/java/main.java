@@ -17,7 +17,6 @@ class MyCustomException extends Exception {
         System.out.println(message);
     }
 
-
 }
 
 public class main {
@@ -101,8 +100,6 @@ public class main {
             } catch (MyCustomException e) {
                 LoggerFile.severe("Entered Choice is present in the menu");
             }
-
-
         }
     }
 
@@ -164,8 +161,6 @@ public class main {
                             break;
                         } else
                             System.out.println("Record not found");
-
-
                     }
                 } else if (inputChoice == 4)
                     break;

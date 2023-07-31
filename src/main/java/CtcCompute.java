@@ -140,11 +140,7 @@ public class CtcCompute {
             }
 
         }
-
     }
-
-
-
 
 }
 
